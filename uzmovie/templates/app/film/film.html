@@ -1,0 +1,13 @@
+{% extends 'base.html'%} {%block title%} Films {%endblock%} {%block content%} {% for i in object_list%}
+<div class="card mb-3">
+    <div class="card_header">
+        <span class="font-weight-bold">
+        <h2>
+            <a href="{%url 'article_detail' i.pk%}" class="text-justify">
+                {{i.title}}
+            </a>
+        </h2>
+       </span>
+        
+</div>
+{%endfor%} {%endblock%}
